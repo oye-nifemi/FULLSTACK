@@ -9,3 +9,12 @@ services:
     - C:/Users/user/Desktop/FULLSTACK/csc2020:/data/postgres
     env_file:
     - comp2020.env
+
+  web:
+    container_name: nginx-csc2020
+    build:
+      context: .
+      dockerfile: nginx-primer/Dockerfile
+    ports:
+     - 8080:80
+     - 443:443
