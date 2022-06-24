@@ -9,8 +9,8 @@ services:
     - C:/Users/user/Desktop/FULLSTACK/csc2020:/data/postgres
     env_file:
     - comp2020.env
-    extra_hosts:
-      - "app-server: 192.168.43.1"
+    # extra_hosts:
+    # - "app-server: 192.168.43.1"
 
   web:
     container_name: nginx-csc2020
@@ -19,4 +19,3 @@ services:
       dockerfile: nginx-primer/Dockerfile
     ports:
      - 8080:80
-     - 443:443
